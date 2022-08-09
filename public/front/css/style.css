@@ -1,4 +1,4 @@
- .visible_banner {
+.visible_banner {
 	overflow: hidden;
 	position:relative;
 }
@@ -145,8 +145,7 @@ padding: 0;
 
 .video_page.tab-bar .tab-content .playlist figure img{
 	width: 100%;
- 
-	
+ 	
 }
 
 
@@ -1503,3 +1502,147 @@ background-color:#F0D144;
 	background-size: 128px 128px;
 	background-image: url("https://i.ya-webdesign.com/images/play-button-png-16.png");
 }
+
+
+
+
+
+
+/*==========POP-UP VIDEO CSS STARTS=========*/
+
+.lightbox_youtube {
+	position:relative;
+}
+.vid_background {
+	background:url(../images/vid_outerbg.png) no-repeat 50% center;
+	background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-webkit-background-size: cover;
+	-ms-background-size: cover;
+	position:relative;
+	min-height: 400px;
+}
+.vid_background:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(1, 18, 10,0.5);
+}
+.lightbox_youtube .button-wrapper {
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.lightbox_youtube button#playme {
+	/*	background-color:transparent;
+	display: inline-block;
+	border: none;*/
+	border:0;
+	background: #ffffff7a;
+	width: 80px;
+	height: 80px;
+	background: #fff;
+	-webkit-animation: pulse 2s infinite;
+	animation: pulse 2s infinite;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	border-radius: 50%;
+}
+.icon-video i {
+	color: #f15d30;
+	font-size: 34px;
+}
+button#playme:hover {
+	opacity:0.7;
+}
+.movie_lightbox {
+	background-color: rgba(0, 0, 0, 0.8);
+	overflow: hidden;
+	position: fixed;
+	display: none;
+	z-index: 999;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	top: 0;
+}
+.lightbox-container {
+	position: relative;
+	max-width: 960px;
+	/*margin: 7% auto;*/
+	margin:0 auto;
+	transform: translateY(-50%);
+	top: 50%;
+	display: block;
+	/*    padding: 0 3%;*/
+	height: auto;
+	z-index: 10;
+}
+.lightbox-content {
+	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
+}
+.lightbox-close {
+	text-transform: uppercase;
+	background-color: transparent;
+	position: absolute;
+	font-weight: 300;
+	font-size: 15px;
+	display: block;
+	border: none;
+	color: white;
+	top: -27px;
+	right: 0;
+	font-weight: 700;
+	opacity: 0.8;
+}
+.video-container {
+	padding-bottom: 56.25%;
+	position: relative;
+	/*    padding-top: 30px; */
+    overflow: hidden;
+	height: 0;
+}
+.video-container iframe, .video-container object, .video-container embed {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+}
+ @-webkit-keyframes shadow {
+ 0% {
+ -webkit-box-shadow: 0 0 0 0 rgba(241, 93, 48, 0.4);
+}
+ 70% {
+ -webkit-box-shadow: 0 0 0 30px rgba(241, 93, 48, 0);
+}
+ 100% {
+ -webkit-box-shadow: 0 0 0 0 rgba(241, 93, 48, 0);
+}
+}
+ @keyframes shadow {
+ 0% {
+ -moz-box-shadow: 0 0 0 0 rgba(241, 93, 48, 0.4);
+ -webkit-box-shadow: 0 0 0 0 rgba(241, 93, 48, 0.4);
+ box-shadow: 0 0 0 0 rgba(241, 93, 48, 0.4);
+}
+ 70% {
+ -moz-box-shadow: 0 0 0 30px rgba(241, 93, 48, 0);
+ -webkit-box-shadow: 0 0 0 30px rgba(241, 93, 48, 0);
+ box-shadow: 0 0 0 30px rgba(241, 93, 48, 0);
+}
+ 100% {
+ -moz-box-shadow: 0 0 0 0 rgba(241, 93, 48, 0);
+ -webkit-box-shadow: 0 0 0 0 rgba(241, 93, 48, 0);
+ box-shadow: 0 0 0 0 rgba(241, 93, 48, 0);
+}
+}
+/*==========POP-UP VIDEO CSS ENDS=========*/

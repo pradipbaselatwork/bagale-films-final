@@ -17,7 +17,6 @@
         </div>
       </li>
     </ul>
-    
     <!-- Tab panes -->
     <div class="tab-content">
       <div class="tab-pane active" id="tabs-1" role="tabpanel">
@@ -38,7 +37,7 @@
             </div>
           </div>
 
-          <div class="col-12">
+          {{-- <div class="col-12">
             <div class="playlist_banner mb-2">
 
               <div class="banner-slider">
@@ -61,13 +60,156 @@
                     </p>
                   </div>
                 </figcaption>
-                <div class="hytPlayerWrapOuter">
-                  <div class="hytPlayerWrap video-placement">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/9JDHw2wFd10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                  </div>
-                </div>
+                  <div class="show_video">
+                    <div class="video_player">
+                      <div class="loader"></div>
+                      <video preload="metadata" class="main-video" autoplay>
+                        <source src="https://mooviehosted.000webhostapp.com/trailer.mp4" size="480" type="video/mp4">
+                        <source src="How to add twak.to chat app in website-720p.mp4" size="720" type="video/mp4">
+                        <source src="How to add twak.to chat app in website-1080p.mp4" size="1080" type="video/mp4">
+                        <track class="track1" label="English" kind="subtitles" src="./How To Get Started With VSCode.vtt" srclang="en">
+                        <track class="track2" label="Urdu" kind="subtitles" src="./test.vtt" srclang="en">
+                      </video>
+                      <p class="caption_text"></p>
+                      <!-- <div class="thumbnail">settings </div> -->
+              
+                      <div class="progressAreaTime" >0:00</div>
+                      
+                      <div class="controls">
+                        <div class="progress-area">
+                          <canvas class="bufferedBar"></canvas>
+                          <div class="progress-bar">
+                            <span></span>
+                          </div>
+                        </div>
+              
+                        <div class="controls-list">
+                          <div class="controls-left">
+                            <span class="icon">
+                              <i class="material-icons fast-rewind">replay_10</i>
+                            </span>
+              
+                            <span class="icon">
+                              <i class="material-icons play_pause" >play_arrow</i>
+                            </span>
+              
+                            <span class="icon">
+                              <i class="material-icons fast-forward">forward_10</i>
+                            </span>
+              
+                            <span class="icon">
+                              <i class="material-icons volume">volume_up</i>
+              
+                              <input type="range" min="0" max="100" class="volume_range" />
+                            </span>
+              
+                            <div class="timer">
+                              <span class="current">0:00</span> /
+                              <span class="duration">0:00</span>
+                            </div>
+                          </div>
+              
+                          <div class="controls-right">
+                            <span class="icon">
+                              <i class="material-icons auto-play"></i>
+                            </span>
+              
+                            <span class="icon">
+                              <i class="material-icons captionsBtn">closed_caption</i>
+                            </span>
+              
+                            <span class="icon">
+                              <i class="material-icons settingsBtn">settings</i>
+                            </span>
+              
+                            <span class="icon">
+                              <i class="material-icons picture_in_picutre">picture_in_picture_alt</i>
+                            </span>
+              
+                            <span class="icon">
+                              <i class="material-icons fullscreen">fullscreen</i>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+              
+                      <div class="settings">
+                        <div data-label="settingHome">
+                          <ul>
+                            <li data-label="speed">
+                              <span> Speed </span>
+                              <span class="material-symbols-outlined icon">
+                                arrow_forward_ios
+                              </span>
+                            </li>
+                            <li data-label="quality">
+                              <span> Quality </span>
+                            <span class="material-symbols-outlined icon">
+                              arrow_forward_ios
+                            </span>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="playback" data-label="speed" hidden>
+                          <span>
+                            <i class="material-symbols-outlined icon back_arrow"  data-label="settingHome">
+                              arrow_back
+                            </i>
+                            <span>Playback Speed </span>
+                          </span>
+                          <ul>
+                            <li data-speed="0.25">0.25</li>
+              
+                            <li data-speed="0.5">0.5</li>
+              
+                            <li data-speed="0.75">0.75</li>
+              
+                            <li data-speed="1" class="active">Normal</li>
+              
+                            <li data-speed="1.25">1.25</li>
+              
+                            <li data-speed="1.5">1.5</li>
+              
+                            <li data-speed="1.75">1.75</li>
+              
+                            <li data-speed="2">2</li>
+                          </ul>
+                        </div>
+                        <div data-label="quality" hidden>
+                          <span>
+                            <i class="material-symbols-outlined icon back_arrow" data-label="settingHome">
+                              arrow_back
+                            </i>
+                            <span>Playback Quality </span>
+                          </span>
+                          <ul>
+                            <li data-quality="auto" class="active">auto</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="captions">
+                        <div class="caption">
+                          <span>Select Subtitle</span>
+                          <ul>
+                            
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    <div id="video" class="movie_lightbox" onclick="hideVideo('video','youtube')">
+                      <div class="lightbox-container">
+                        <div class="lightbox-content">
+                          <button onclick="hideVideo('video','youtube')" class="lightbox-close"> ✕ </button>
+                          <div class="video-container">
+                            <iframe id="youtube" width="960" height="540" src="https://www.youtube.com/embed/dpXyd1eiKqY?loop=1&rel=0" frameborder="0" allowfullscreen></iframe>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
               </div>
             </div>
-          </div>
+          </div> --}}
           <!--<ul>-->
             @forelse($video as $data)
             <div class="col-12">
@@ -83,21 +225,161 @@
                     <div class="show-more mt-2"><a href="javascript:void(0)" class="btn"> MORE <i class="fa-solid fa-angle-down"></i></a></div>
                     <div class="show-more-content">
                       <p> 
-
                       </p>
                       <div class="show-less"> <a href="javascript:void(0)" class="btn"> LESS <i class="fa-solid fa-angle-up"></i></a></div>
                     </div>
                     </p>
                   </div>
                 </figcaption>
-                <div class="hytPlayerWrapOuter">
-                  <div class="hytPlayerWrap video-placement">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/9JDHw2wFd10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                  </div>
+                <div class="show_video" id="show_video_{{$data->id}}">
+                  <div class="video_player video_player_{{$data->id}}">
+                    <div class="loader"></div>
+                    <video preload="metadata" class="main-video main-video-{{$data->id}}" autoplay>
+                      <source src="https://mooviehosted.000webhostapp.com/trailer.mp4" size="480" type="video/mp4">
+                      <source src="How to add twak.to chat app in website-720p.mp4" size="720" type="video/mp4">
+                      <source src="How to add twak.to chat app in website-1080p.mp4" size="1080" type="video/mp4">
+                      <track class="track1" label="English" kind="subtitles" src="./How To Get Started With VSCode.vtt" srclang="en">
+                      <track class="track2" label="Urdu" kind="subtitles" src="./test.vtt" srclang="en">
+                    </video>
+                    <p class="caption_text"></p>
+                    <!-- <div class="thumbnail">settings </div> -->
+            
+                    <div class="progressAreaTime" >0:00</div>
+                    
+                    <div class="controls">
+                      <div class="progress-area">
+                        <canvas class="bufferedBar"></canvas>
+                        <div class="progress-bar">
+                          <span></span>
+                        </div>
+                      </div>
+            
+                      <div class="controls-list">
+                        <div class="controls-left">
+                          <span class="icon">
+                            <i class="material-icons fast-rewind">replay_10</i>
+                          </span>
+            
+                          <span class="icon">
+                            <i class="material-icons " onclick="playPause(this.getAttribute('attr'))" attr="{{ $data->id }}" >play_arrow</i>
+                          </span>
+            
+                          <span class="icon">
+                            <i class="material-icons fast-forward">forward_10</i>
+                          </span>
+            
+                          <span class="icon">
+                            <i class="material-icons volume">volume_up</i>
+            
+                            <input type="range" min="0" max="100" class="volume_range" />
+                          </span>
+            
+                          <div class="timer">
+                            <span class="current">0:00</span> /
+                            <span class="duration">0:00</span>
+                          </div>
+                        </div>
+            
+                        <div class="controls-right">
+                          <span class="icon">
+                            <i class="material-icons auto-play"></i>
+                          </span>
+            
+                          <span class="icon">
+                            <i class="material-icons captionsBtn">closed_caption</i>
+                          </span>
+            
+                          <span class="icon">
+                            <i class="material-icons settingsBtn">settings</i>
+                          </span>
+            
+                          <span class="icon">
+                            <i class="material-icons picture_in_picutre">picture_in_picture_alt</i>
+                          </span>
+            
+                          <span class="icon">
+                            <i class="material-icons fullscreen">fullscreen</i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+            
+                    <div class="settings">
+                      <div data-label="settingHome-{{ $data->id }}">
+                        <ul>
+                          <li data-label="speed-{{ $data->id }}">
+                            <span> Speed </span>
+                            <span class="material-symbols-outlined icon">
+                              arrow_forward_ios
+                            </span>
+                          </li>
+                          <li data-label="quality">
+                            <span> Quality </span>
+                          <span class="material-symbols-outlined icon">
+                            arrow_forward_ios
+                          </span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="playback" data-label="speed-{{ $data->id }}" hidden>
+                        <span>
+                          <i class="material-symbols-outlined icon back_arrow"  data-label="settingHome-{{ $data->id }}">
+                            arrow_back
+                          </i>
+                          <span>Playback Speed </span>
+                        </span>
+                        <ul>
+                          <li data-speed="0.25">0.25</li>
+            
+                          <li data-speed="0.5">0.5</li>
+            
+                          <li data-speed="0.75">0.75</li>
+            
+                          <li data-speed="1" class="active">Normal</li>
+            
+                          <li data-speed="1.25">1.25</li>
+            
+                          <li data-speed="1.5">1.5</li>
+            
+                          <li data-speed="1.75">1.75</li>
+            
+                          <li data-speed="2">2</li>
+                        </ul>
+                      </div>
+                      <div data-label="quality" hidden>
+                        <span>
+                          <i class="material-symbols-outlined icon back_arrow" data-label="settingHome{{ $data->id }}">
+                            arrow_back
+                          </i>
+                          <span>Playback Quality </span>
+                        </span>
+                        <ul>
+                          <li data-quality="auto" class="active">auto</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="captions">
+                      <div class="caption">
+                        <span>Select Subtitle</span>
+                        <ul>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-
+                <div id="video-{{ $data->id }}" class="movie_lightbox" onclick="hideVideo('video-','youtube-', this.getAttribute('attr'))"  attr="{{ $data->id }}">
+                  <div class="lightbox-container">
+                    <div class="lightbox-content">
+                      <button onclick="hideVideo('video','youtube')" class="lightbox-close"> ✕ </button>
+                      <div class="video-container">
+                        <iframe id="youtube-{{ $data->id }}" width="960" height="540" src="https://www.youtube.com/embed/dpXyd1eiKqY?loop=1&rel=0" frameborder="0" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="hytPlayerWrapOuter" id="final-vedio-{{$data->id}}" style="display: block">
+                  <div class="hytPlayerWrap video-placement">
+                    <iframe src="https://www.youtube.com/embed/YwEKIl3qQzA?rel=0&autoplay=1" width="100%" height="400px" frameborder="0"></iframe>                  </div>
             @empty
             @endforelse
             
